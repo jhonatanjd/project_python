@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %} {% endblock %}</title>
+        
+        
+        
+        <!- importar un archivo css->
+        <link type='text/css' href='{% static "CSS/plantillaBarraNavegacion.css" %}' rel='stylesheet'/>
+    </head>
+    <body>
+        {% include "plantillaBarraNavegacion.html" %}
+        <h1 style='color: blue;''>krakenjj92</h1>
+        
+        
+        <!- importar una imagen ->
+        <img src='{% static "IMAGES/logo.jpg" %}'/>
+
+        {% block content %}  
+        
+        
+        {% endblock %}
+        <p>e es el pie de pagina </p>
+
+
+
+        <!-importar un archivo javascript ->
+        <script type='text/javascript' src='{% static "JS/plantillaPadre.js" %}'></script>
+    </body>
+</html>
