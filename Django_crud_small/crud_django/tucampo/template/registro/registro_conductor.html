@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Conductor</title>
+    <style type="text/css">
+        #Information {background:rgb(58, 233, 96); padding: 10px 20px; border-style:double; border-color: black;}
+        
+        fieldset {background:rgba(70, 241, 107, 0.808);}
+        p {background-color: rgba(116, 207, 25, 0.781); padding: 10px; width: 400px; height: 50px;
+            display: inline-block; margin: 15px;}
+        p.uno {  border: 2px solid #27b958; padding: 0px; width: 500px;
+            border-radius: 5px;
+            -moz-border-radius: 0px;
+            -webkit-border-radius: 10px;}
+    </style>
+</head>
+<body>
+    <h2 id="Information">REGISTRO CONDUCTOR</h2>
+    <fieldset>
+        <legend><i><b>DATOS PERSONALES</b></i></legend> <br />
+        <i>
+            <label>NOMBRES: <input type="text" name="nombres" size="50"/></label> <br /><br />
+            <label>APELLIDOS: <input type="text" name="apellidos" size="50"></label><br /><br />
+            <label>DOCUMENTO: </label>
+            <input id="cedula" type="radio" name="identif" value="C">
+            <label for="cedula">Cedula</label>
+            <input id="tarjeta" type="radio" name="identif" value="T">
+            <label for="male">Tarjeta</label>
+            <input id="pasport" type="radio" name="identif" value="P">
+            <label for="passport">Pasaporte</label>
+            <label><br/>Número  </label><input type="text" name="identif" size="12"><br /><br />
+            <label>Email: <input type="text" name="apellidos" size="20"></label>
+            <label>Teléfono Celular <input type="text" name="identif" size="12"></label>
+            <label>Teléfono fijo <input type="text" name="identif" size="12"><br /><br /> </label>
+            <label>Dirección: <input type="text" name="nombres" size="50"/></label> <br /><br />
+            <label>Departamento: <input type="text" name="apellidos" size="20"></label>
+            <label>Ciudad: <input type="text" name="apellidos" size="20"></label><br /><br />
+        </i>
+    </fieldset>
+    <br />
+    <fieldset>
+        <legend><i><b>TIPO DE VEHICULO</b></i></legend>
+        <label>Tipo Vehículo: <input type="text" name="apellidos" size="20"></label>
+        <label>Modelo: <input type="text" name="identif" size="12"></label>
+        <label>Capacidad Carga <input type="text" name="identif" size="12"><br /><br /> </label>
+        <label>Placas <input type="text" name="nombres" size="50"/></label> <br /><br />
+    </fieldset>
+    <br />
+    <fieldset>
+        <br />
+        <legend><i><b>USUARIO - CONTRASEÑA</b></i></legend>
+        <label>USUARIO:  <input type="text" name="nombres" size="50" placeholder=" # CEDULA"/></label><br /><br />
+        <label>CONTRASEÑA:  <input type="text" name="nombres" size="50"/></label> <br /> <br />
+        <label>CONFIRMAR CONTRASEÑA:  <input type="text" name="nombres" size="50"/></label> <br /> <br />
+        <a href= "./ingreso_usuario.html"><input type="submit" value="Ingresar"></a>  
+        <a href= "../TRABAJO1/index.html"><input type="submit" value="Cancelar"></a> <br />
+        <br />
+        <p class="uno">"Su contraseña debe ser mínimo de 8 caracteres - Debe contener una Mayúscula y números."</p>
+    </fieldset>
+</body>
+</html>

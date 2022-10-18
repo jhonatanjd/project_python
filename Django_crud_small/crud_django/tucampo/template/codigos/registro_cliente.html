@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Cliente</title>
+    <style type="text/css">
+    body {background-color: #b1beb1;}
+        #Information {background:#b1beb1;; padding: 10px 20px; border-radius: 10px; border-style:double; border-color: black;}
+        #information1 {background:#b1beb1;;}
+        p {background-color: #ffffff; padding: 10px; width: 400px; height: 50px;
+            display: inline-block; margin: 15px;}
+        p.uno {  border: 2px solid #27b958; padding: 0px; width: 500px;
+            border-radius: 5px;
+            -moz-border-radius: 0px;
+            -webkit-border-radius: 10px;}
+            input {border-radius: 5px; padding: 10px;  } 
+            #registrar{position: relative; left: 200px; background: #444;}
+            #registrar:hover {background: #bbb;} h2 {text-align: center;}
+    </style>
+</head>
+<body>
+
+
+    <img src="./images/tucampo.jpg" alt="tu campo" width="1300px"  height="320px"/>
+    <h2 id="Information">REGISTRO CLIENTE</h2>
+    <fieldset  id="information1">
+        <legend><i><b>DATOS PERSONALES</b></i></legend> <br />
+        <i>
+            <label>NOMBRES: <input type="text" name="nombres" size="50"/></label> <br /><br />
+            <label>APELLIDOS: <input type="text" name="apellidos" size="50"></label><br /><br />
+            <label>DOCUMENTO: </label>
+            <input id="cedula" type="radio" name="identif" value="C">
+            <label for="cedula">Cedula</label>
+            <input id="tarjeta" type="radio" name="identif" value="T">
+            <label for="male">Tarjeta</label>
+            <input id="pasport" type="radio" name="identif" value="P">
+            <label for="passport">Pasaporte</label>
+            <label><br/>Número  </label><input type="text" name="identif" size="12"><br /><br />
+            <label>Email: <input type="text" name="apellidos" size="20"></label>
+            <label>Teléfono Celular <input type="text" name="identif" size="12"></label>
+            <label>Teléfono fijo <input type="text" name="identif" size="12"><br /><br /> </label>
+            <label>Dirección: <input type="text" name="nombres" size="50"/></label> <br /><br />
+            <label>Departamento: <input type="text" name="apellidos" size="20"></label>
+            <label>Ciudad: <input type="text" name="apellidos" size="20"></label><br /><br />
+        <br><br>
+            <input id="registrar"  type="submit" value=  "   registrar       " class="button">
+        </i>
+    </fieldset>
+    <br />
+    
+</body>
+</html>

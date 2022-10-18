@@ -1,0 +1,23 @@
+body {font-family: 'calibri'; margin: 0; background-image: 
+url(./images/tucampo.jpg); background-size: cover; background-attachment: fixed; opacity:.8 ;}
+*{box-sizing: border-box;}
+.contenedor{width: 100%; padding: 15px;}
+.formulario {background: #98a280; margin-top: 150px; padding: 3px;}
+#asador {position: relative;   border-radius: 30px; left: 200px;}
+#img-carrito {position: relative;  left: 200px; border-radius: 30px;}
+#inic {position:absolute;top:  30px; left: 320px;}
+#inicio{border-radius: 30px;}
+p{font-size: 30px;} .link {font-size: 20px;}
+h1{text-align: center; color: #1a2537; font-size: 40px;}
+#notad {font-size: 17px; margin: 20px;}
+
+#ini {text-align: center;}
+.link, a {text-decoration: none; color: #1a2537; font-weight: 600;} 
+.link:hover {color: #ffffff;}
+@media(min-width:760px) {.formulario {margin: auto; width: 500px; margin-top: 150px;border-radius: 2%;}} 
+input {position: relative; left: 50px; border-radius: 5px; background:#98a280;
+    border: 1px solid #1f53c5;height: 20px ;padding: 20px; width: 80%; font-size: 18px;}
+input [type="text"] ,
+input [type="password"]  {font-size: 20px; width: 100%; padding: 10px; border: none;}  
+.button{background: #1f53c5;}
+.button:hover {background: black; color:whitesmoke ;}
