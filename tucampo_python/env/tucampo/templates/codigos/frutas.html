@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TuCampo</title>
+    <style type="text/css">
+     body {background-color: #B1BEB1;}
+    h1 {text-align: center;color: #000000;}
+    h4 {font-size: 16px;font-weight: 700;}
+    header {padding: 20px 0 0 0;text-align: center;background-color: #5B7535;}
+    .navct {color: rgb(26, 94, 9);padding-top: 15px;text-transform: uppercase;}
+    .navct a {color: rgb(0, 0, 0);text-decoration: none;}
+    @media (min-width: 750px) {header {text-align: left;}}
+    ul {list-style: none;}
+    #hero {background-image: url(./images/tucampo.jpg);position: relative; z-index: 0;background-repeat: no-repeat;background-position: center;background-size: cover;height: 520px;}
+    #hero::before {content: "";background: rgba(0, 0, 0, 0); position: absolute;top: 0;min-height: 100%;left: 10px;right: 100px;z-index: -1;}
+    #encabezado {margin: 20px 0;text-decoration: underline;}
+    .submenu {position: relative;}
+    .submenu #carrito {display: none;}
+    .submenu:hover #carrito {display: block;position: absolute; right: 0;color: #3A5C3A;top: 100%; z-index: 1; background-color: #13271E;
+    padding: 10px;min-height: 400px;min-width: 100px;}
+    .vacio {padding: 10px;background-color: yellow;text-align: center;border-radius: 10px;color: violet;}
+    .contenido-hero {padding-top: 120px;margin-top: 80px;color: #000000;}
+    .contenido-hero form {position: relative;margin-bottom: 0;}
+    .contenido-hero form #buscador {height: 50px;margin-bottom: 0;}
+    .contenido-hero form  .submit-buscador {position: absolute;right: 0;top: 0;height: 100%;padding: 0;display: block;text-indent: -9999px;width: 50px;
+    background-image: url(./images/lupa.png);background-position: right center;background-repeat: no-repeat;border: none; }
+    .barra {padding: 20px 0;background: #2C5945;}
+    .barra p {margin: 0;color: #079191;font-size: 17px;}
+    .icono {background-repeat: no-repeat;background-position: left center;padding-left: 60px;background-size: 30px;margin-bottom: 40px;text-align: center;}
+    @media (min-width: 750px) {.icono {margin-bottom: 0;}}
+    .icono1 {background-image: url(./images/arbol.png);}
+    .icono2 {background-image: url(./images/online.png);}
+    .icono3 {background-image: url(./images/envio.png);}
+    #lista-cafe .row {margin-bottom: 20px;}
+    .agregar-carrito {margin: 10px 0;}
+    .card {text-align: center;box-shadow: 0 25px 98px 0 rgb(0, 0, 0 / 3%);background: #386146;}
+    .info-card p, .card h4 {margin-bottom: 5px;}
+    .footer {border-top: 1px solid rgb(2, 92, 99);margin-top: 40px;padding-top: 40px;}
+    .footer .menu a {display: block;color: #104F1C;margin-bottom: 20px;text-decoration: none;}
+    li {float: left;}
+    
+    
+    
+    </style>
+    
+
+<link rel="stylesheet" href="./css/normalize.css">
+
+    <link rel="stylesheet" href="./css/skeleton.css">
+    
+    
+
+</head>
+<body>
+
+    <header id="header" class="header">
+        <div class="container">
+            <div class="row">
+
+                <div class="four columns">
+                    <img src="./images/logo (2).png" alt="" id="logo>">
+                </div>
+
+                <div class="two columns u-pull-right">
+                    <ul>
+                        <li class="submenu">
+                            <img src="./images/cart.png" alt="" id="img-carrito">
+                            <div id="carrito">
+                                <table id="lista-carrito" class="u-full-width">
+                                    <thead>
+                                        <tr>
+                                            <th>Imagen</th>
+                                            <th>Nombres</th>
+                                            <th>Precio</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                                <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+                            </div> 
+                        </li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="four columns">
+                        <ul class="navct">
+                            <li class="four columns"><a href="./pro.html">Inicio</a></li>
+                            <li class="four columns"><a href="./ofertas">Oferta</a></li>
+                            <li class="four columns"><a href="#">Vender</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </header>
+
+    <div id="hero">
+        <div class="container">
+            <div class="row">
+                <div class="six columns">
+                    <div class="contenido-hero">
+                        <h2>
+
+                        </h2>
+                        <p>
+                            
+                        </p>
+                        <form action="#" id="busqueda" method="past" class="formulario">
+                            <input class="u-full-width" type="text"
+                            placeholder="Que Productos estas Buscando"
+                            id="buscador">
+                            <input type="submit" id="submit-buscador" class="submit-buscador">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="barra">
+        <div class="container">
+            <div class="row">
+                <div class="four columns icono icono1">
+                    <p>La Fruta te Espera<br> 
+                        Madurando en el Arbol 
+                    </p>
+                </div>
+                <div class="four columns icono icono2">
+                    <p>Compras Comodamente<br>
+                        Online
+                    </p>
+                </div>
+                <div class="four colums icono icono3">
+                    <p>Nosotros la Recojemos<br>
+                        y la Entregamos
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="lista-cafe" class="container">
+        <h1 id="encabezado" class="encabezado">Pedidos en Linea</h1>
+
+        <div class="row">
+            
+            <div class="four columns">
+                <div class="card">
+                    <img src="./images/manzana.jpg" class="u-full-width">
+                    <div class="info-card">
+                        <h4>manzana * 500g</h4>
+                        <p>Frutas</p>
+                        <img src="./images/estrellas.png">
+                        <p class="precio">$990 <span class="u-full-rigth"></span></p>
+                        <a href="#"
+                        class="u-full-width 
+                        button-primary 
+                        button 
+                        input 
+                        agregar-carrito">Agregar al Carrito</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="four columns">
+                <div class="card">
+                    <img src="./images/mandarina.jpg" class="u-full-width">
+                    <div class="info-card">
+                        <h4>mandarina</h4>
+                        <p>Frutas</p>
+                        <img src="./images/estrellas.png">
+                        <p class="precio">$6500<span class="u-full-rigth"></span></p>
+                        <a href="#"
+                        class="u-full-width 
+                        button-primary 
+                        button 
+                        input 
+                        agregar-carrito">Agregar al Carrito</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="four columns">
+                <div class="card">
+                    <img src="./images/naranja.jpg" class="u-full-width">
+                    <div class="info-card">
+                        <h4>naranja * 500g</h4>
+                        <p>Frutas</p>
+                        <img src="./images/estrellas.png">
+                        <p class="precio">$1500 <span class="u-full-rigth"></span></p>
+                        <a href="#"
+                        class="u-full-width 
+                        button-primary 
+                        button 
+                        input 
+                        agregar-carrito">Agregar al Carrito</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div><!--.row-->
+
+        <div class="row">
+            
+            <div class="four columns">
+                <div class="card">
+                    <img src="./images/fresaya.jpg" class="u-full-width">
+                    <div class="info-card">
+                        <h4>fresa * 500g</h4>
+                        <p>Frutas</p>
+                        <img src="./images/estrellas.png">
+                        <p class="precio">$4500 <span class="u-full-rigth"></span></p>
+                        <a href="#"
+                        class="u-full-width 
+                        button-primary 
+                        button 
+                        input 
+                        agregar-carrito">Agregar al Carrito</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="four columns">
+                <div class="card">
+                    <img src="./images/uvas.jpg" class="u-full-width">
+                    <div class="info-card">
+                        <h4>uvas * 1000g</h4>
+                        <p>frutas</p>
+                        <img src="./images/estrellas.png">
+                        <p class="precio">$1600<span class="u-full-rigth"></span></p>
+                        <a href="#"
+                        class="u-full-width 
+                        button-primary 
+                        button 
+                        input 
+                        agregar-carrito">Agregar al Carrito</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="four columns">
+                <div class="card">
+                    <img src="./images/bananoya.jpg" class="u-full-width">
+                    <div class="info-card">
+                        <h4>banano * 2000g</h4>
+                        <p>Frutas</p>
+                        <img src="./images/estrellas.png">
+                        <p class="precio">$3200 <span class="u-full-rigth"></span></p>
+                        <a href="#"
+                        class="u-full-width 
+                        button-primary 
+                        button 
+                        input 
+                        agregar-carrito">Agregar al Carrito</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div><!--.row-->
+    </div>
+
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="row">
+                
+                <div class="four columns">
+                    <nav id="principal" class="menu">
+                        <a class="enlace" href="#">Contactenos</a>
+                        <a class="enlace" href="#">Vende tus Productos</a>
+                        <a class="enlace" href="#">Aplicacion Movil</a>  
+                        <a class="enlace" href="#">Favoritos</a>
+                    </nav>
+                </div>
+
+                <div class="four columns">
+                    <nav id="principal" class="menu">
+                        <a class="enlace" href="#"> Quienes Somos?</a>
+                        <a class="enlace" href="#">Empleo</a>
+                        <a class="enlace" href="#">Blog</a>  
+                    </nav>
+                </div>
+
+
+            
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</htm>
