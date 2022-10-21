@@ -1,5 +1,5 @@
 """
-ASGI config for universidad_curso project.
+ASGI config for tucampo2 project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'universidad_curso.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'tucampo2.settings')
 
 application = get_asgi_application()

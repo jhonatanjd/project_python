@@ -1,6 +1,6 @@
 @echo off
 
-set "VIRTUAL_ENV=D:\django_python\app_django\entorno"
+set "VIRTUAL_ENV=D:\django_python\app_django\entorno2"
 
 if defined _OLD_VIRTUAL_PROMPT (
     set "PROMPT=%_OLD_VIRTUAL_PROMPT%"
