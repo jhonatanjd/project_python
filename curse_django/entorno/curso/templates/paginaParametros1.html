@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+
+        <title>plantillas que recibe parametros </title>
+        <style type="text/css">
+            li {
+                color: blue;
+               }
+        </style>
+    </head>
+    <body>
+        <h1>nombre del canal:  {{nombre}}</h1>
+        <h2>fecha actual : D&iacute;a: {{fechaActual.day}}   -  mes {{fechaActual.month}}</h2>
+        <h3>el correo es {{correo}}</h3>
+        <ul>
+            {% for leng in lenguajes %}
+                {% if leng == 'python' %}
+                    <li style='color: yellow;'>{{leng}}</li>
+                {% else %}
+                    <li>{{leng|lower}}</li>
+                {% endif %}
+            {% endfor %}
+    </body>
+
+
+    </html>

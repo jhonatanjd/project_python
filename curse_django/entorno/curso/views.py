@@ -15,7 +15,7 @@ def pagina (request):
     documento = template.render(contexto)
     return HttpResponse(documento)
 
-#plantillas con parametros coore, nombre, fecha 
+#plantillas con parametros correo, nombre, fecha 
 def plantillasParametros (request):
     nombre = "jonatan de jesus"
     correo = "krakenjj@hotmail.com"
@@ -25,6 +25,37 @@ def plantillasParametros (request):
     plantillaExterna.close()
     contexto = Context({"nombre": nombre, "fechaActual": fechaActual, "correo": correo})
     documento = template.render(contexto)
+    return HttpResponse(documento)
+
+#plantillas con poo 
+
+class alumno(object):
+    def inicializa(self,nombre,nota):
+        self.nombre=nombre
+        self.nota=nota
+    
+    def mostrar_nota(self):
+        if self.nota >4:
+            resultado='aprobo'
+        else:
+            resultado='no aprobo'
+
+            return resultado
+
+
+def poo (request):
+    
+    a1=alumno()
+    a1.inicializa('andres',5)   
+    resultado=a1.mostrar_nota()
+    fecha= datetime.datetime.now()
+    colores =[]
+    
+    doc_Externo = open("D:/django_python/curse_django/entorno/curso/templates/paginaParametros1.html")
+    template= Template(doc_Externo.read())
+    doc_Externo.close()
+    ctx = Context({'nombre':a1.nombre, 'resultado': resultado, 'fecha': fecha, 'temas': colores,})
+    documento = template.render(ctx)
     return HttpResponse(documento)
 
 #comentarios
