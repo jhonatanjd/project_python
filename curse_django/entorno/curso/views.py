@@ -29,7 +29,6 @@ def plantillasParametros (request):
     return HttpResponse(documento)
 
 #plantillas con poo 
-
 class alumno(object):
     def inicializa(self,nombre,nota):
         self.nombre=nombre
@@ -41,13 +40,12 @@ class alumno(object):
         else:
             resultado='no aprobo'
         return resultado
-
 def poo (request):
     a1=alumno()
-    a1.inicializa('andres',5)   
+    a1.inicializa('juan',2)   
     resultado=a1.mostrar_nota()
     fecha= datetime.datetime.now()
-    colores =['azul','amarillo','rojo']
+    colores =[]
     
     doc_Externo = open("D:/django_python/curse_django/entorno/curso/templates/paginaParametros1.html")
     template= Template(doc_Externo.read())
