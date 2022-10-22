@@ -1,27 +1,37 @@
 <!DOCTYPE html>
     <html>
     <head>
-
-        <title>plantillas que recibe parametros </title>
-        <style type="text/css">
-            li {
-                color: blue;
-               }
-        </style>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>documnet</title>  
     </head>
     <body>
-        <h1>nombre del canal:  {{nombre}}</h1>
-        <h2>fecha actual : D&iacute;a: {{fechaActual.day}}   -  mes {{fechaActual.month}}</h2>
-        <h3>el correo es {{correo}}</h3>
-        <ul>
-            {% for leng in lenguajes %}
-                {% if leng == 'python' %}
-                    <li style='color: yellow;'>{{leng}}</li>
-                {% else %}
-                    <li>{{leng|lower}}</li>
-                {% endif %}
-            {% endfor %}
+        <p style="color:green; font-size:10px">bienvenidos a priemra pagina con plantilllas poo</p>
+        <p> fecha {{ fecha }} </p>
+        <p>mi nombre es : {{ nombre.upper }} </p>
+        <p>mi estado es : {{ resultado }}</p>
+        <p>mi estado es : {{ temas }}</p>
+        <hr>
+        <p>valores de la lista : {{ temas.1 }}&nbsp;{{ temas.2 }}  </p>
+        <hr>
+        <p> {% if temas %}
+                {% for item in temas %} 
+
+                <li>{{item}}</li>   
+
+                {% endfor %}
+            {% else %}
+                no hay datos
+            {% endif %}    
+        </p>
+        <hr>
+        <p>
+            {% if nombre == "andres" %}
+                <span style="font-size:12px;color:green">el profesor es el titular</span>
+            {% else %}
+            <span style="font-size:12px;color:red">el profesor no es el titular</span>
+            {% endif %}    
+        </p>
     </body>
-
-
     </html>
