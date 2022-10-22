@@ -19,7 +19,7 @@ from curso.views import pagina, plantillaHija2
 from curso.views import plantillasParametros
 from curso.views import hora
 from curso.views import categoriaEdad,obtenerMomentoActual,contenidohtml,listas,plantillasParametrosColor,comentarios
-from curso.views import plantillaCargador,plantillaShortcut,plantillaHija1,plantillaHija2,poo
+from curso.views import plantillaCargador,plantillaShortcut,plantillaHija1,plantillaHija2,poo,poo1
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -37,7 +37,7 @@ urlpatterns = [
     path('hija/', plantillaHija1),
     path('hija1/', plantillaHija2),
     path('poo/',poo ),
-
+    path('po/',poo1 ),
 
 
 

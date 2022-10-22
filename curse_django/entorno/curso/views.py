@@ -28,32 +28,6 @@ def plantillasParametros (request):
     documento = template.render(contexto)
     return HttpResponse(documento)
 
-#plantillas con poo 
-class alumno(object):
-    def inicializa(self,nombre,nota):
-        self.nombre=nombre
-        self.nota=nota
-    
-    def mostrar_nota(self):
-        if self.nota >=4:
-            resultado='aprobo'
-        else:
-            resultado='no aprobo'
-        return resultado
-def poo (request):
-    a1=alumno()
-    a1.inicializa('juan',2)   
-    resultado=a1.mostrar_nota()
-    fecha= datetime.datetime.now()
-    colores =[]
-    
-    doc_Externo = open("D:/django_python/curse_django/entorno/curso/templates/paginaParametros1.html")
-    template= Template(doc_Externo.read())
-    doc_Externo.close()
-    ctx = Context({'nombre':a1.nombre, 'resultado': resultado, 'fecha': fecha, 'temas': colores })
-    documento = template.render(ctx)
-    return HttpResponse(documento)
-
 #comentarios
 def comentarios (request):
     """este 
@@ -97,14 +71,6 @@ def listas (request):
     documento = template.render(contexto)
     return HttpResponse(documento)
 
-#plantilla    
-    #plantillaExterna = open("D:/curse_django/entorno/curso/templates/listas.html")
-    #template= Template(plantillaExterna.read())
-    #plantillaExterna.close()
-    #contexto = Context({"lenguajes": lenguajes })
-    #documento = template.render(contexto)
-    #return HttpResponse(documento)
-
 #hora
 def hora(request):
    
@@ -147,6 +113,57 @@ def contenidohtml(request, nombre, edad):
     """   % (nombre, edad)  
     return HttpResponse(contenido) 
 
+#plantillas con poo 
+class alumno(object):
+    def inicializa(self,nombre,nota):
+        self.nombre=nombre
+        self.nota=nota
+    
+    def mostrar_nota(self):
+        if self.nota >=4:
+            resultado='aprobo'
+        else:
+            resultado='no aprobo'
+        return resultado
+def poo (request):
+    a1=alumno()
+    a1.inicializa('juan',2)   
+    resultado=a1.mostrar_nota()
+    fecha= datetime.datetime.now()
+    colores =[]
+    
+    doc_Externo = open("D:/django_python/curse_django/entorno/curso/templates/paginaParametros1.html")
+    template= Template(doc_Externo.read())
+    doc_Externo.close()
+    ctx = Context({'nombre':a1.nombre, 'resultado': resultado, 'fecha': fecha, 'temas': colores })
+    documento = template.render(ctx)
+    return HttpResponse(documento)
+
+#plantillas con poo con shortcut y recargadores
+class alumno1(object):
+    def inicializa(self,nombre,nota):
+        self.nombre=nombre
+        self.nota=nota
+    
+    def mostrar_nota(self):
+        if self.nota >=4:
+            resultado='aprobo'
+        else:
+            resultado='no aprobo'
+        return resultado
+def poo1 (request):
+    a1=alumno1()
+    a1.inicializa('andres',5)   
+    resultado=a1.mostrar_nota()
+    fecha= datetime.datetime.now()
+    colores =['amarillo', 'azul', 'rojo'
+    
+    ]
+    
+    doc_Externo = get_template("paginaParametros1.html")
+    documento = doc_Externo.render({'nombre':a1.nombre, 'resultado': resultado, 'fecha': fecha, 'temas': colores })
+    return HttpResponse(documento)
+
 #cargadores
 def plantillaCargador(request):
     nombre = "jonatan de jesus"
@@ -173,6 +190,9 @@ def plantillaHija1(request):
     
 def plantillaHija2(request):
     return render (request, "plantillaHija_2.html",{})
+
+
+
 
 
 #barra de navegacion
