@@ -15,11 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from curso.views import pagina, plantillaHija2
-from curso.views import plantillasParametros
-from curso.views import hora
-from curso.views import categoriaEdad,obtenerMomentoActual,contenidohtml,listas,plantillasParametrosColor,comentarios
-from curso.views import plantillaCargador,plantillaShortcut,plantillaHija1,plantillaHija2,poo,poo1
+#from curso import views
+from curso.views import pagina, plantillaHija2,plantillasParametros,hora,categoriaEdad,obtenerMomentoActual,contenidohtml,listas
+from curso.views import plantillasParametrosColor,comentarios,plantillaCargador,plantillaShortcut,plantillaHija1
+from curso.views import plantillaHija2,poo,poo1,baseHija1
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -38,6 +38,7 @@ urlpatterns = [
     path('hija1/', plantillaHija2),
     path('poo/',poo ),
     path('po/',poo1 ),
+    path('bh/',baseHija1),
 
 
 

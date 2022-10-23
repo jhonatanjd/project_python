@@ -191,7 +191,8 @@ def plantillaHija1(request):
 def plantillaHija2(request):
     return render (request, "plantillaHija_2.html",{})
 
-
+def baseHija1(request):
+    return render (request, "baseHija.html")
 
 
 
